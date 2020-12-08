@@ -1,0 +1,256 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Products Detail";
+}
+
+<section>
+    <div class="container">
+        <div class="product-details">
+            <!--product-details-->
+            <div class="col-sm-5">
+                <div class="view-product">
+                    <img src="~/images/products/@Model.Image" alt="" />
+                    <h3>ZOOM</h3>
+                </div>
+                <div id="similar-product" class="carousel slide" data-ride="carousel">
+
+                    <!-- Controls -->
+                    <a class="left item-control" href="#similar-product" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="right item-control" href="#similar-product" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-sm-7">
+                <div class="product-information">
+                    <!--/product-information-->
+                    <h2>@Model.Name</h2>
+                    <img src="images/product-details/rating.png" alt="" />
+                    <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                        <input type="hidden" name="Id" value="@Model.Id" />
+                        <span>
+                            <span>@Model.Price</span>
+                            <label>Quantity:</label>
+                            <input type="number" name="Quantity" value="1" min="1" max="5" />
+                            <button type="submit" class="btn btn-fefault cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                Add to cart
+                            </button>
+                        </span>
+                    </form>
+                    <p><b>Availability:</b> @Model.Status</p>
+                    <p><b>Brand:</b> @Model.Manufacturer.Name</p>
+                    <p><b>Category:</b> @Model.Category.Name</p>
+                    <a href=""><img src="images/product-details/share.png" class="share img-responsive" alt="" /></a>
+                </div><!--/product-information-->
+            </div>
+        </div><!--/product-details-->
+
+        <div class="category-tab shop-details-tab">
+            <!--category-tab-->
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#description" data-toggle="tab">Decription</a></li>
+                    <li><a href="#reviews" data-toggle="tab">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="description">
+                    <div style="padding: 15px">
+                        <div class="ck-content">
+                            @Html.Raw(Model.Description)
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="reviews">
+                    <div class="col-sm-12">
+                        <div id="comments">
+
+                        </div>
+
+                        <p><b>Write Your Review</b></p>
+
+                        <form id="comment-form">
+                            <input type="hidden" name="productId" value="@Model.Id" />
+                            <textarea required name="content"></textarea>
+                            <b>Rating: </b> <input type="number" name="rating" value="0" min="0" max="10" />
+                            <button type="submit" class="btn btn-default pull-right">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--/category-tab-->
+
+        <div class="recommended_items">
+            <!--recommended_items-->
+            <h2 class="title text-center">recommended items</h2>
+
+            <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/recommend1.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Easy Polo Black Edition</p>
+                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/recommend2.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Easy Polo Black Edition</p>
+                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/recommend3.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Easy Polo Black Edition</p>
+                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/recommend1.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Easy Polo Black Edition</p>
+                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/recommend2.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Easy Polo Black Edition</p>
+                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="images/home/recommend3.jpg" alt="" />
+                                        <h2>$56</h2>
+                                        <p>Easy Polo Black Edition</p>
+                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div><!--/recommended_items-->
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/ckeditor5/ckeditor.js"></script>
+    <script>
+        document.querySelectorAll('oembed[url]').forEach(element => {
+            iframely.load(element, element.attributes.url.value);
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "/api/ProductComments?productId=@Model.Id",
+                contentType: "application/json",
+                dataType: "json"
+            }).done(function (data) {
+                data.forEach(item => {
+                    addComment(item);
+                })
+            }).fail(function (xhr, status, error) {
+                alert("Something went wrong");
+            });
+        });
+
+        $("#comment-form").submit(function (event) {
+            event.preventDefault();
+            var form = $(this);
+            var productId = form.find('input[name="productId"]');
+            var rating = form.find('input[name="rating"]');
+            var content = form.find('textarea[name="content"]');
+            var button = form.find('button');
+            button.prop('disabled', true);
+            $.ajax({
+                type: "POST",
+                url: "/api/ProductComments",
+                data: JSON.stringify({
+                    productId: productId.val(),
+                    rating: rating.val(),
+                    content: content.val()
+                }),
+                contentType: "application/json",
+                dataType: "json"
+            }).done(function (data) {
+                addComment(data);
+                rating.val(0);
+                content.val("");
+            }).fail(function (xhr, status, error) {
+                switch (xhr.status) {
+                    case 401:
+                        window.location.href = "/Account/Login";
+                        break;
+                    default:
+                        alert("Something went wrong");
+                        break;
+                }
+            }).always(function () {
+            button.prop('disabled', falseFqu);
+            });
+        });
+
+        function addComment(data) {
+            var createdDate = new Date(data.createdDate);
+            var htmlContent = `<div data-id="${data.id}">
+                               <ul>
+                                <li><a href="javascript: void(0)"><i class="fa fa-user"></i>${data.userName}</a></li>
+                                <li><a href="javascript: void(0)"><i class="fa fa-clock-o"></i>${createdDate.toLocaleTimeString()}</a></li>
+                                <li><a href="javascript: void(0)"><i class="fa fa-calendar-o"></i>${createdDate.toLocaleDateString()}</a></li>
+                               </ul>
+                               <p>${data.content}</p>
+                               </div>`
+            $('#comments').prepend(htmlContent);
+        }
+    </script>
+}
