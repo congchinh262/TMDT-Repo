@@ -1,0 +1,120 @@
+﻿@model MobieStoreWeb.Models.Order
+
+@{
+    ViewData["Title"] = "OrderDetails";
+}
+
+<div class="container">
+    <h1>OrderDetails</h1>
+
+    <div>
+        <h4>Infomation</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ShippingName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ShippingName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ShippingAddress)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ShippingAddress)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ShippingPhoneNumber)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ShippingPhoneNumber)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DeliveryOption)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DeliveryOption)
+            </dd>
+        </dl>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BillingName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BillingName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BillingAddress)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BillingAddress)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BillingPhoneNumber)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BillingPhoneNumber)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PaymentMethod)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PaymentMethod)
+            </dd>
+        </dl>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PaymentStatus)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PaymentStatus)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.OrderDate)
+            </dd>
+        </dl>
+    </div>
+
+    <div>
+        <h4>Products</h4>
+        <hr />
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.OrderDetails)
+                {
+                    <tr>
+                        <td><img src="~/images/products/@item.Product.Image" style="width: 150px;" /></td>
+                        <td>@item.Product.Name</td>
+                        <td>@item.Price</td>
+                        <td>@item.Quantity</td>
+                        <td>@(item.Price * item.Quantity)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <a asp-action="Index" class="btn btn-primary">Back to Account</a>
+    </div>
+</div>

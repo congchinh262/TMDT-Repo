@@ -1,0 +1,80 @@
+﻿@model CartViewModel
+@{
+    ViewData["Title"] = "Cart";
+    var index = 0;
+}
+
+<section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li class="active">Shopping Cart</li>
+            </ol>
+        </div>
+        <div>
+            @if (Model.Items?.Count > 0)
+            {
+                <form asp-action="Index" method="post">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Items)
+                            {
+                                <tr>
+                                    <td><img src="~/images/products/@item.Image" style="width: 110px" /></td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Price</td>
+                                    <td>
+                                        <input type="hidden" name="Items[@index].Id" value="@item.Id" />
+                                        <input type="number" name="Items[@index].Quantity" value="@item.Quantity" min="1" max="5" />
+                                    </td>
+                                    <td>@item.Total</td>
+                                    <td>
+                                        <button type="button" onclick="removeItem('@item.Id')" class="btn btn-primary">
+                                            X
+                                        </button>
+                                    </td>
+                                </tr>
+                                index++;
+                            }
+                        </tbody>
+                    </table>
+                    <div>Total: @Model.Total VND</div>
+                    <button type="submit" class="btn btn-primary">Update Quantity</button>
+                    <a asp-controller="Checkout" asp-action="Index" class="btn btn-primary">Checkout</a>
+                </form>
+                <form asp-action="RemoveFromCart" method="post" id="remove-form" class="hidden">
+                    <input type="hidden" name="Id" />
+                </form>
+            }
+            else
+            {
+                //Sửa đi
+        <div class="container">
+            <img style="display:block;margin-left: auto;margin-right: auto" src="~/images/checkout/404.png" />
+            <h1 class="text-center"><span>Giỏ hàng hiện đang trống , kính mời quý khách vui lòng thêm sản phẩm</span></h1>
+        </div>
+            }
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script>
+        function removeItem(id) {
+            var form = $('#remove-form');
+            form.find('input[name=Id]').val(id);
+            form.submit();
+        }
+    </script>
+}

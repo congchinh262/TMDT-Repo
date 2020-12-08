@@ -1,0 +1,34 @@
+﻿@model UserInfoViewModel
+
+@{
+    ViewData["Title"] = User.Identity.Name;
+}
+
+<div class="container">
+    <div>
+        <a class="btn btn-primary" asp-action="ChangePassword">Change Password</a>
+        <a class="btn btn-primary" asp-action="Orders">View My Orders</a>
+    </div>
+    <hr />
+    <form asp-action="Index" method="post">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input class="form-control" asp-for="Name" />
+            <span class="text-danger" asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address"></label>
+            <input class="form-control" asp-for="Address" />
+            <span class="text-danger" asp-validation-for="Address"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber"></label>
+            <input class="form-control" asp-for="PhoneNumber" />
+            <span class="text-danger" asp-validation-for="PhoneNumber"></span>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Change</button>
+        </div>
+    </form>
+</div>
