@@ -1,0 +1,4 @@
+﻿#categories h4 > a.active,
+#manufacturers li > a.active {
+    color:orange;
+}

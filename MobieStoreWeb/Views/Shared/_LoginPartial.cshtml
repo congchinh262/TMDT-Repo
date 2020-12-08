@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <li><a asp-area="" asp-controller="Account" asp-action="Index"><i class="fa fa-lock"></i> Hello @User.Identity.Name!</a></li>
+    <li>
+        <a href="javascript: void(0)" onclick="$(this).find('form').submit()">
+            <form class="form-inline" method="post" asp-area="" asp-controller="Account" asp-action="Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <i class="fa fa-lock"></i> Logout
+            </form>
+        </a>
+    </li>
+}
+else
+{
+    <li><a asp-area="" asp-controller="Account" asp-action="Register"><i class="fa fa-lock"></i> Register</a></li>
+
+    <li><a asp-area="" asp-controller="Account" asp-action="Login"><i class="fa fa-lock"></i> Login</a></li>
+}

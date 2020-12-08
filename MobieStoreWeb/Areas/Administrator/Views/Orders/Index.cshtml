@@ -1,0 +1,130 @@
+﻿@model IEnumerable<MobieStoreWeb.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="padding:10px;">
+
+    <h3>Search</h3>
+    @*<form asp-action="Index" method="get">
+            <div class="form-actions no-color">
+                <p style="margin-top:20px">
+                    <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
+                    <input type="submit" value="Search" class="btn btn-outline-success btn-sm" /> |
+                    <a asp-action="Index">Back to Full List</a>
+                </p>
+            </div>
+        </form>*@
+<form asp-action="Index" method="get">
+    <label class="label label-primary">Order Status</label>
+    <div id="Status" class="form-actions no-color">
+        <p style="margin-top:20px">
+            <select id="status" name="status" class="form-control"
+                    asp-items="@ViewBag.Status" >
+            </select>
+        </p>
+    </div>
+    <label class="label label-primary">Payment Method</label>
+    <div id="paymentMethod" class="form-actions no-color">
+        <p style="margin-top:20px">
+            <select id="paymentMethod" name="paymentMethod" class="form-control"
+                    asp-items="@ViewBag.paymentMethod">
+            </select>
+        </p>
+    </div>
+    <label class="label label-primary">Payment Status</label>
+    <div id="PaymentStatus" class="form-actions no-color">
+        <p style="margin-top:20px">
+            <select id="paymentStatus" name="paymentStatus" class="form-control"
+                    asp-items="@ViewBag.PaymentStatus">
+            </select>
+        </p>
+    </div>
+    <label class="label label-primary">Delivery Option</label>
+    <div id="DeliveryOption" class="form-actions no-color">
+        <p style="margin-top:20px">
+            <select id="deliveryOption" name="deliveryOption" class="form-control"
+                    asp-items="@ViewBag.DeliveryOption">
+            </select>
+        </p>
+    </div>
+    <input type="submit" value="Search" class="btn btn-outline-success btn-sm" /> |
+    <a asp-action="Index">Back to Full List</a>
+</form>
+
+
+
+    @if (Model == null)
+    {
+        <h1 style="color:red;text-align:center">No data Found</h1>
+
+    }
+    else
+    {
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    
+                    <th>
+                        @Html.DisplayNameFor(model => model.ShippingName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ShippingAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ShippingPhoneNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeliveryOption)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BillingPhoneNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PaymentMethod)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PaymentStatus)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OrderDate)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        
+                        <td>@item.ShippingName</td>
+                        <td>@item.ShippingAddress</td>
+                        <td>@item.ShippingPhoneNumber</td>
+                        <td>@item.DeliveryOption</td>
+                        <td>@item.BillingName</td>
+                        <td>@item.BillingAddress</td>
+                        <td>@item.BillingPhoneNumber</td>
+                        <td>@item.PaymentMethod</td>
+                        <td>@item.PaymentStatus</td>
+                        <td>@item.Status</td>
+                        <td>@item.OrderDate</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    }
+
+</div>

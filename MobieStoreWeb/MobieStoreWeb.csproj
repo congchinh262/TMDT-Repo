@@ -1,0 +1,125 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-MobieStoreWeb-2AB08EA3-1146-47A8-A895-DE3DE2EC867E</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20200220085735_InitTables.cs" />
+    <Compile Remove="Data\Migrations\20200220085735_InitTables.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200228084859_InitData.cs" />
+    <Compile Remove="Data\Migrations\20200228084859_InitData.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200423073728_AlterTableProduct.cs" />
+    <Compile Remove="Data\Migrations\20200423073728_AlterTableProduct.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200423074914_InitDataCategoryAndBrand.cs" />
+    <Compile Remove="Data\Migrations\20200423074914_InitDataCategoryAndBrand.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200423082147_InitTables.cs" />
+    <Compile Remove="Data\Migrations\20200423082147_InitTables.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200423082408_InitTables.cs" />
+    <Compile Remove="Data\Migrations\20200423082408_InitTables.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200423082457_InitData.cs" />
+    <Compile Remove="Data\Migrations\20200423082457_InitData.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200423082706_InitTables.cs" />
+    <Compile Remove="Data\Migrations\20200423082706_InitTables.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200423085826_InitTables.cs" />
+    <Compile Remove="Data\Migrations\20200423085826_InitTables.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200424075506_InitTables.cs" />
+    <Compile Remove="Data\Migrations\20200424075506_InitTables.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200503082048_InitTables.cs" />
+    <Compile Remove="Data\Migrations\20200503082048_InitTables.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200504080157_FixSomeThingOcCho.cs" />
+    <Compile Remove="Data\Migrations\20200504080157_FixSomeThingOcCho.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200504083718_AlterUsersTableAndOrdersTable.cs" />
+    <Compile Remove="Data\Migrations\20200504083718_AlterUsersTableAndOrdersTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200504090959_AlterOrdersTable.cs" />
+    <Compile Remove="Data\Migrations\20200504090959_AlterOrdersTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200506071443_InitTables.cs" />
+    <Compile Remove="Data\Migrations\20200506071443_InitTables.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200506071906_InitTables.cs" />
+    <Compile Remove="Data\Migrations\20200506071906_InitTables.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Areas\Administrator\Data\" />
+    <Folder Include="wwwroot\images\products\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\ckeditor5\translations\af.js" />
+    <None Include="wwwroot\ckeditor5\translations\ar.js" />
+    <None Include="wwwroot\ckeditor5\translations\ast.js" />
+    <None Include="wwwroot\ckeditor5\translations\az.js" />
+    <None Include="wwwroot\ckeditor5\translations\bg.js" />
+    <None Include="wwwroot\ckeditor5\translations\ca.js" />
+    <None Include="wwwroot\ckeditor5\translations\cs.js" />
+    <None Include="wwwroot\ckeditor5\translations\da.js" />
+    <None Include="wwwroot\ckeditor5\translations\de-ch.js" />
+    <None Include="wwwroot\ckeditor5\translations\de.js" />
+    <None Include="wwwroot\ckeditor5\translations\el.js" />
+    <None Include="wwwroot\ckeditor5\translations\en-au.js" />
+    <None Include="wwwroot\ckeditor5\translations\en-gb.js" />
+    <None Include="wwwroot\ckeditor5\translations\eo.js" />
+    <None Include="wwwroot\ckeditor5\translations\es.js" />
+    <None Include="wwwroot\ckeditor5\translations\et.js" />
+    <None Include="wwwroot\ckeditor5\translations\eu.js" />
+    <None Include="wwwroot\ckeditor5\translations\fa.js" />
+    <None Include="wwwroot\ckeditor5\translations\fi.js" />
+    <None Include="wwwroot\ckeditor5\translations\fr.js" />
+    <None Include="wwwroot\ckeditor5\translations\gl.js" />
+    <None Include="wwwroot\ckeditor5\translations\gu.js" />
+    <None Include="wwwroot\ckeditor5\translations\he.js" />
+    <None Include="wwwroot\ckeditor5\translations\hr.js" />
+    <None Include="wwwroot\ckeditor5\translations\hu.js" />
+    <None Include="wwwroot\ckeditor5\translations\id.js" />
+    <None Include="wwwroot\ckeditor5\translations\it.js" />
+    <None Include="wwwroot\ckeditor5\translations\ja.js" />
+    <None Include="wwwroot\ckeditor5\translations\km.js" />
+    <None Include="wwwroot\ckeditor5\translations\kn.js" />
+    <None Include="wwwroot\ckeditor5\translations\ko.js" />
+    <None Include="wwwroot\ckeditor5\translations\ku.js" />
+    <None Include="wwwroot\ckeditor5\translations\lt.js" />
+    <None Include="wwwroot\ckeditor5\translations\lv.js" />
+    <None Include="wwwroot\ckeditor5\translations\ms.js" />
+    <None Include="wwwroot\ckeditor5\translations\nb.js" />
+    <None Include="wwwroot\ckeditor5\translations\ne.js" />
+    <None Include="wwwroot\ckeditor5\translations\nl.js" />
+    <None Include="wwwroot\ckeditor5\translations\no.js" />
+    <None Include="wwwroot\ckeditor5\translations\oc.js" />
+    <None Include="wwwroot\ckeditor5\translations\pl.js" />
+    <None Include="wwwroot\ckeditor5\translations\pt-br.js" />
+    <None Include="wwwroot\ckeditor5\translations\pt.js" />
+    <None Include="wwwroot\ckeditor5\translations\ro.js" />
+    <None Include="wwwroot\ckeditor5\translations\ru.js" />
+    <None Include="wwwroot\ckeditor5\translations\si.js" />
+    <None Include="wwwroot\ckeditor5\translations\sk.js" />
+    <None Include="wwwroot\ckeditor5\translations\sl.js" />
+    <None Include="wwwroot\ckeditor5\translations\sq.js" />
+    <None Include="wwwroot\ckeditor5\translations\sr-latn.js" />
+    <None Include="wwwroot\ckeditor5\translations\sr.js" />
+    <None Include="wwwroot\ckeditor5\translations\sv.js" />
+    <None Include="wwwroot\ckeditor5\translations\th.js" />
+    <None Include="wwwroot\ckeditor5\translations\tr.js" />
+    <None Include="wwwroot\ckeditor5\translations\tt.js" />
+    <None Include="wwwroot\ckeditor5\translations\ug.js" />
+    <None Include="wwwroot\ckeditor5\translations\uk.js" />
+    <None Include="wwwroot\ckeditor5\translations\vi.js" />
+    <None Include="wwwroot\ckeditor5\translations\zh-cn.js" />
+    <None Include="wwwroot\ckeditor5\translations\zh.js" />
+  </ItemGroup>
+
+</Project>
