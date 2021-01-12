@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewData["Title"] - MobieStoreWeb</title>
+    <link href="~/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/static/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/static/css/price-range.css" rel="stylesheet">
+    <link href="~/static/css/animate.css" rel="stylesheet">
+    <link href="~/static/css/main.css" rel="stylesheet">
+    <link href="~/static/css/responsive.css" rel="stylesheet">
+    <link href="~/static/css/site.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="~/static/js/html5shiv.js"></script>
+    <script src="~/static/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="~/static/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/static/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/static/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/static/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/static/images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-phone"></i> +84 92 4422788</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> kudoshjn70@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a asp-controller="Home" asp-action="Index"><img src="~/images/image/logo.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a asp-controller="Checkout" asp-action="Index"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                                <li><a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                <partial name="_LoginPartial" />
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                <li><a asp-controller="Products" asp-action="Index" >Products</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="search_box pull-right">
+                            <form asp-controller="Products" asp-action="Index" method="get">
+                                <input type="search" name="search" placeholder="Search" onkeypress="if (event.keyCode == 13) {$(event).closest('form').submit()}"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+    @RenderBody()
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-top">
+            <div class="container">
+                <div class="col-sm-2">
+                    <div class="companyinfo">
+                        <h2><span>hc</span>-Mobile</h2>
+                        <div class="font-weight-bold">Hồ Chí Minh</div>
+                        <div>
+                            <div>
+                                <p>123 Trần Quang Khải, Q.1</p>
+                                <p>
+                                    Điện thoại: <a>0924422788</a>
+                                </p>
+                            </div>
+                            <div>
+                                <p>602 Lê Hồng Phong, P.10, Q.10</p>
+                                <p>
+                                    Điện thoại: <a>0924422788</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="address">
+                        <img src="~/static/images/home/map.png" alt="" />
+                        <p>Thành Phố Hồ Chí Mình , Việt Nam </p>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <div>
+                                <img src="~/images/footer/redmi-k30-5g-blue.jpg" alt="" />
+                            </div>
+                            <p>Xiaomi Redmi K30 (RAM 6GB, 8GB)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                            <div>
+                                <img src="~/images/footer/redmi-note-8-2.jpg" />
+                                <p>Xiaomi Redmi Note 8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+                    <p class="pull-right"><partial name="_SelectLanguagePartial" /></p>
+                </div>
+            </div>
+        </div>
+
+    </footer><!--/Footer-->
+
+
+
+    <script src="~/static/js/jquery.js"></script>
+    <script src="~/static/js/bootstrap.min.js"></script>
+    <script src="~/static/js/jquery.scrollUp.min.js"></script>
+    <script src="~/static/js/price-range.js"></script>
+    <script src="~/static/js/jquery.prettyPhoto.js"></script>
+    <script src="~/static/js/main.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
