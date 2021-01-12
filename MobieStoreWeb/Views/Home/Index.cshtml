@@ -38,7 +38,7 @@
                         @foreach (Category item in ViewBag.Categories)
                         {
                             <div class="panel panel-default">
-                                <div class="panel-heading"  >
+                                <div class="panel-heading">
                                     <h4 class="panel-title"><a asp-controller="Products" asp-action="Index" asp-route-category="@item.Id">@item.Name</a></h4>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                                     <div class="productinfo text-center">
                                         <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id">
                                             <img src="~/images/products/@item.Image" alt="" />
-                                            <h2>@item.Price VND</h2>
+                                            <h2>@item.Price ĐLĐ</h2>
                                             <p>@item.Name</p>
                                         </a>
                                         <form asp-controller="Cart" asp-action="AddToCart" method="post">
@@ -90,6 +90,141 @@
                         </div>
                     }
                 </div>
+
+                <div class="category-tab">
+                    <!--category-tab-->
+                    <div class="col-sm-12">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tshirt" data-toggle="tab">MOBILE</a></li>
+                            <li><a href="#blazers" data-toggle="tab">TABLET</a></li>
+                            <li><a href="#sunglass" data-toggle="tab">WATCH</a></li>
+                            <li><a href="#kids" data-toggle="tab">LAPTOP</a></li>
+                            <li><a href="#poloshirt" data-toggle="tab">ACCESSORY</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="tshirt">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="product-image-wrapper">
+
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id">
+                                                    <img src="~/images/products/@item.Image" alt="" />
+                                                    <h2>@item.Price ĐLĐ</h2>
+                                                    <p>@item.Name</p>
+                                                </a>
+                                                <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                                    <input type="hidden" name="Id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="tab-pane fade" id="blazers">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="product-image-wrapper">
+
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id">
+                                                    <img src="~/images/products/@item.Image" alt="" />
+                                                    <h2>@item.Price ĐLĐ</h2>
+                                                    <p>@item.Name</p>
+                                                </a>
+                                                <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                                    <input type="hidden" name="Id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="tab-pane fade" id="sunglass">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="product-image-wrapper">
+
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id">
+                                                    <img src="~/images/products/@item.Image" alt="" />
+                                                    <h2>@item.Price ĐLĐ</h2>
+                                                    <p>@item.Name</p>
+                                                </a>
+                                                <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                                    <input type="hidden" name="Id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="tab-pane fade" id="kids">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="product-image-wrapper">
+
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id">
+                                                    <img src="~/images/products/@item.Image" alt="" />
+                                                    <h2>@item.Price ĐLĐ</h2>
+                                                    <p>@item.Name</p>
+                                                </a>
+                                                <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                                    <input type="hidden" name="Id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="tab-pane fade" id="poloshirt">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="product-image-wrapper">
+
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id">
+                                                    <img src="~/images/products/@item.Image" alt="" />
+                                                    <h2>@item.Price ĐLĐ</h2>
+                                                    <p>@item.Name</p>
+                                                </a>
+                                                <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                                    <input type="hidden" name="Id" value="@item.Id" />
+                                                    <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
                 <div class="recommended_items">
                     <!--recommended_items-->
                     <h2 class="title text-center">recommended items</h2>
@@ -97,9 +232,8 @@
                     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="item active">
-                                @foreach (var item in Model.Reverse())
+                                @foreach (var item in Model)
                                 {
-                                    
                                     <div class="col-md-6 col-lg-4">
                                         <div class="product-image-wrapper">
 
@@ -107,7 +241,7 @@
                                                 <div class="productinfo text-center">
                                                     <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id">
                                                         <img src="~/images/products/@item.Image" alt="" />
-                                                        <h2>@item.Price VND</h2>
+                                                        <h2>@item.Price ĐLĐ</h2>
                                                         <p>@item.Name</p>
                                                     </a>
                                                     <form asp-controller="Cart" asp-action="AddToCart" method="post">
@@ -118,8 +252,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                        
-                                    }
+                                }
                             </div>
                             <div class="item">
                                 @foreach (var item in Model)
@@ -131,7 +264,7 @@
                                                 <div class="productinfo text-center">
                                                     <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id">
                                                         <img src="~/images/products/@item.Image" alt="" />
-                                                        <h2>@item.Price VND</h2>
+                                                        <h2>@item.Price ĐLĐ</h2>
                                                         <p>@item.Name</p>
                                                     </a>
                                                     <form asp-controller="Cart" asp-action="AddToCart" method="post">
