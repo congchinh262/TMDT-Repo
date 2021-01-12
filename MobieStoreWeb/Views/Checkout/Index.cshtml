@@ -1,0 +1,115 @@
+﻿@model CheckoutViewModel
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a asp-controller="Home">Home</a></li>
+                <li class="active">Check out</li>
+            </ol>
+        </div><!--/breadcrums-->
+
+        <form asp-action="Index" method="post">
+            <div class="text-danger" asp-validation-summary="All"></div>
+            <div class="checkout-options">
+                <p>Checkout options</p>
+                <ul class="nav">
+                    <li>
+                        <label><input type="radio" asp-for="IsGuest" value="false"> Register Account</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" asp-for="IsGuest" value="true"> Guest Checkout</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="shopper-informations">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div>
+                            <p>Bill To</p>
+                            <div>
+                                <div class="form-group">
+                                    <label asp-for="BillingName"></label>
+                                    <input asp-for="BillingName" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="BillingAddress"></label>
+                                    <input asp-for="BillingAddress" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="BillingPhoneNumber"></label>
+                                    <input asp-for="BillingPhoneNumber" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="PaymentMethod"></label>
+                                    <select asp-for="PaymentMethod" asp-items="@Html.GetEnumSelectList<PaymentMethod>()" class="form-control"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Ship To</p>
+                            <div>
+                                <div class="form-group">
+                                    <label asp-for="ShippingName"></label>
+                                    <input asp-for="ShippingName" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ShippingAddress"></label>
+                                    <input asp-for="ShippingAddress" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ShippingPhoneNumber"></label>
+                                    <input asp-for="ShippingPhoneNumber" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="DeliveryOption"></label>
+                                    <select asp-for="DeliveryOption" asp-items="@Html.GetEnumSelectList<DeliveryOption>()" class="form-control">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Comfirm</button>
+            </div>
+        </form>
+
+        <div class="review-payment">
+            <h2>Review & Payment</h2>
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Cart.Items)
+                    {
+                        <tr>
+                            <td><img src="~/images/products/@item.Image" style="width: 110px" /></td>
+                            <td>@item.Name</td>
+                            <td>@item.Price</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.Total</td>                          
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section> <!--/#cart_items-->
