@@ -14,15 +14,28 @@
     <link href="~/static/css/main.css" rel="stylesheet">
     <link href="~/static/css/responsive.css" rel="stylesheet">
     <link href="~/static/css/site.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/404.css">
+    <link rel="stylesheet" href="~/css/about.css">
+    <link rel="stylesheet" href="~/css/contact.css">
+    <link rel="stylesheet" href="~/css/checkout.css">
+    <link rel="stylesheet" href="~/css/converse.css">
+    <link rel="stylesheet" href="~/css/detail.css">
+    <link rel="stylesheet" href="~/css/Home.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <script src="https://kit.fontawesome.com/dd3bcb13d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
     <!--[if lt IE 9]>
     <script src="~/static/js/html5shiv.js"></script>
     <script src="~/static/js/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="~/static/images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/static/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/static/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/static/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="~/static/images/ico/apple-touch-icon-57-precomposed.png">
+    @*<link rel="shortcut icon" href="~/static/images/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/static/images/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/static/images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/static/images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="~/static/images/ico/apple-touch-icon-57-precomposed.png">*@
 </head><!--/head-->
 
 <body>
@@ -30,141 +43,202 @@
         <!--header-->
         <div class="header_top">
             <!--header_top-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="contactinfo">
-                            <ul class="nav nav-pills">
-                                <li><a href="#"><i class="fa fa-phone"></i> +84 92 4422788</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> kudoshjn70@gmail.com</a></li>
-                            </ul>
+            <div class="header-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7 top1">
+                            <div class="header__top__left">
+                                <p>Free shipping, 30-day return or refund guarantee.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="social-icons pull-right">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-
-                            </ul>
+                        <div class="col-lg-6 col-md-5 top2">
+                            <div class="header__top__right">
+                                <div class="header__top__links">
+                                    <a class="top-btn" href="#">Sign up |</a>
+                                    <a class="top-btn" href="#">Sign in |</a>
+                                    <a class="top-btn" href="#">FAQs</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div><!--/header_top-->
 
-        <div class="header-middle">
+        <div class="nav navbar-expand-lg slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="header-logo">
+                            <a class="navbar-logo logo" href="#">
+                                <img src="/img/logo1.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="header-menu">
+                            <ul class="navbar-nav">
+                                <li class="nav-item item1">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item nav1">
+                                    <a class="nav-link" href="#">Shoes</a>
+                                    <!-- <ul class="dropdown">
+                                        <li><a href="#">Converse</a></li>
+                                        <li><a href="#">Vans</a></li>
+                                        <li><a href="#">Palladium</a></li>
+                                    </ul> -->
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Clothing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Accessories</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="header-option">
+                            <ul>
+                                <li class="search-bar">
+                                    <a href="#"><i class="fa fa-search search-btn"></i></a>
+                                </li>
+                                <li class="cart-bar">
+                                    <a href="#"><i class="fas fa-shopping-cart cart-btn"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="header-middle">-->
             <!--header-middle-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="logo pull-left">
-                            <a asp-controller="Home" asp-action="Index"><img src="~/images/image/logo.png" alt="" /></a>
+            <!--<div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="logo pull-left">
+                                <a asp-controller="Home" asp-action="Index"><img src="~/images/image/logo.png" alt="" /></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="shop-menu pull-right">
-                            <ul class="nav navbar-nav">
-                                <li><a asp-controller="Checkout" asp-action="Index"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <partial name="_LoginPartial" />
-                            </ul>
+                        <div class="col-sm-8">
+                            <div class="shop-menu pull-right">
+                                <ul class="nav navbar-nav">
+                                    <li><a asp-controller="Checkout" asp-action="Index"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                                    <li><a asp-controller="Cart" asp-action="Index"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                    <partial name="_LoginPartial" />
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div><!--/header-middle-->
-
-        <div class="header-bottom">
+            </div>-->
+            <!--/header-middle-->
+            <!--<div class="header-bottom">-->
             <!--header-bottom-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-9">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
+            <!--<div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="mainmenu pull-left">
+                                <ul class="nav navbar-nav collapse navbar-collapse">
+                                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                    <li><a asp-controller="Products" asp-action="Index">Products</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="mainmenu pull-left">
-                            <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                                <li><a asp-controller="Products" asp-action="Index" >Products</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="search_box pull-right">
-                            <form asp-controller="Products" asp-action="Index" method="get">
-                                <input type="search" name="search" placeholder="Search" onkeypress="if (event.keyCode == 13) {$(event).closest('form').submit()}"/>
-                            </form>
+                        <div class="col-sm-3">
+                            <div class="search_box pull-right">
+                                <form asp-controller="Products" asp-action="Index" method="get">
+                                    <input type="search" name="search" placeholder="Search" onkeypress="if (event.keyCode == 13) {$(event).closest('form').submit()}" />
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div><!--/header-bottom-->
+            </div>-->
+            <!--/header-bottom-->
     </header><!--/header-->
     @RenderBody()
-    <footer id="footer">
-        <!--Footer-->
-        <div class="footer-top">
-            <div class="container">
-                <div class="col-sm-2">
-                    <div class="companyinfo">
-                        <h2><span>hc</span>-Mobile</h2>
-                        <div class="font-weight-bold">Hồ Chí Minh</div>
-                        <div>
-                            <div>
-                                <p>123 Trần Quang Khải, Q.1</p>
-                                <p>
-                                    Điện thoại: <a>0924422788</a>
-                                </p>
-                            </div>
-                            <div>
-                                <p>602 Lê Hồng Phong, P.10, Q.10</p>
-                                <p>
-                                    Điện thoại: <a>0924422788</a>
-                                </p>
-                            </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer1">
+                <div class="col-md-3 col1">
+                    <div class="footer_about">
+                        <div class="footer-logo">
+                            <a href="#">
+                                <img src="img/logo.png" />
+                            </a>
                         </div>
+                        <p>
+                            The customer is at the heart of our unique business model, which includes design.
+                        </p>
+                        <a href="#">
+                            <img src="img/payment.png" />
+                        </a>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="address">
-                        <img src="~/static/images/home/map.png" alt="" />
-                        <p>Thành Phố Hồ Chí Mình , Việt Nam </p>
-                    </div>
+                <div class="col-md-3 col2">
+                    <p>Shopping</p>
+                    <ul>
+                        <li>
+                            <a class="footer-link" href="#">Clothing Store</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Trending Shoes</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Accessories</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Sale</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-sm-7">
-                    <div class="col-sm-3">
-                        <div class="video-gallery text-center">
-                            <div>
-                                <img src="~/images/footer/redmi-k30-5g-blue.jpg" alt="" />
-                            </div>
-                            <p>Xiaomi Redmi K30 (RAM 6GB, 8GB)</p>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="video-gallery text-center">
-                            <div>
-                                <img src="~/images/footer/redmi-note-8-2.jpg" />
-                                <p>Xiaomi Redmi Note 8</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-3 col3">
+                    <p>Shopping</p>
+                    <ul>
+                        <li>
+                            <a class="footer-link" href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Payment Methods</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Delivary</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Return & Exchanges</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-                    <p class="pull-right"><partial name="_SelectLanguagePartial" /></p>
+                <div class="col-md-3 col4">
+                    <p>Newletter</p>
+                    <div class="footer-newletter">
+                        <p>Be the first to know about new arrivals, look books, sales promos!</p>
+                        <form>
+                            <input class="newletter-input" type="text" placeholder="Your email">
+                            <button type="submit">
+                                <span><i class="far fa-envelope"></i></span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-
     </footer><!--/Footer-->
 
 

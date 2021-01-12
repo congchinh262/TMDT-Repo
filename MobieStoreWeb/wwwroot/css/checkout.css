@@ -1,0 +1,125 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.breadcumb-option{
+    background: #f3f2ee;
+    padding: 40px 0;
+}
+.breadcumb-text h4{
+    font-weight: 600;
+}
+.breadcumb-links a{
+    font-size: 14px;
+    font-family: monospace;
+    text-decoration: none !important;
+    color: black;
+}
+a.a-links:hover{
+    color: black !important;
+}
+.breadcumb-links span{
+    font-size: 14px;
+    font-family: monospace;
+    color: #b7b7b7;
+}
+
+.checkout-spad{
+    padding: 100px 0 100px 0;
+}
+.checkout-title{
+    color: black;
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+.checkout-input{
+    margin-bottom: 6px;
+}
+.checkout-input p{
+    color:black;
+    margin-bottom: 12px;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 13px;
+}
+.checkout-input p span{
+    color: #e53637;
+}
+.checkout-input input{
+    height: 50px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    color: #b7b7b7;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-family: monospace;
+}
+.checkout-order{
+    background: #f3f2ee;
+    padding: 30px;
+}
+.order-title{
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    font-family: monospace;
+}
+.checkout-order-products{
+    font-size: 14px;
+    color: #111;
+    overflow: hidden;
+    margin-bottom: 20px; 
+    font-family: monospace;
+}
+.checkout-order-products span{
+    float: right;
+}
+.checkout-total-products li{
+    font-size: 14px;
+    color: #444;
+    list-style: none;
+    line-height: 23px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.checkout-total-products li span{
+    float: right;
+}
+.checkout-total-all{
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 15px 0;
+    margin-bottom: 25px;
+}
+.checkout-total-all li{
+    font-size: 14px;
+    color: #444;
+    list-style: none;
+    line-height: 23px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.checkout-total-all li span{
+    color: #e53637;
+    font-weight: 700;
+    float: right;
+}
+.site-btn{
+    width: 100%;
+    height: 50px;
+    color: white;
+    background: black;
+    border: none;
+    display: inline-block;
+    font-weight: 700;
+}

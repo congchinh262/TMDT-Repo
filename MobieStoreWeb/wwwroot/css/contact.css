@@ -1,0 +1,71 @@
+.contact-spad{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: monospace;
+}
+.section-title{
+    text-align: left;
+    margin-bottom: 40px;
+}
+.section-title span{
+    color: #e53637;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    display: block;
+}
+.section-title h2{
+    font-size: 60px;
+    margin-bottom: 18px;
+}
+.section-title p{
+    color: #707070;
+    line-height: 26px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.contact-inf ul{
+    list-style-type: none !important;
+}
+.contact-inf ul li h4{
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.contact-inf ul li p{
+    font-size: 14px;
+    color: #3d3d3d;
+    font-weight: 400;
+}
+.contact-form input{
+    height: 50px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    padding-left: 20px;
+    font-size: 15px;
+    color: #b7b7b7;
+    margin-bottom: 30px;
+}
+.contact-form textarea{
+    height: 150px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    padding-left: 20px;
+    padding-top: 12px;
+    font-size: 15px;
+    color: #b7b7b7;
+    margin-bottom: 24px;
+    resize: none;
+}
+.site-btn{
+    font-size: 14px;
+    color: #fff;
+    background: #111;
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 30px 15px 30px;
+}
