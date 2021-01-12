@@ -4,18 +4,12 @@
     var index = 0;
 }
 
-<section id="cart_items">
+<section style="font-size: 16px" id="cart_items">
     <div class="container">
-        <div class="breadcrumbs">
-            <ol class="breadcrumb">
-                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                <li class="active">Shopping Cart</li>
-            </ol>
-        </div>
         <div>
             @if (Model.Items?.Count > 0)
             {
-                <form asp-action="Index" method="post">
+                <form asp-action="Index" method="post" style="margin-bottom: 2em;">
                     <table class="table">
                         <thead>
                             <tr>
@@ -49,9 +43,9 @@
                             }
                         </tbody>
                     </table>
-                    <div>Total: @Model.Total ĐLĐ</div>
-                    <button type="submit" class="btn btn-primary">Update Quantity</button>
-                    <a asp-controller="Checkout" asp-action="Index" class="btn btn-primary">Checkout</a>
+                    <div>Total: $ @Model.Total</div>
+                    <button style=" padding: 10px 20px; font-size: 14px;" type="submit" class="btn btn-primary">Update Quantity</button>
+                    <a  style=" padding: 10px 20px; font-size: 14px; margin-left: 5px;" asp-controller="Checkout" asp-action="Index" class="btn btn-primary">Checkout</a>
                 </form>
                 <form asp-action="RemoveFromCart" method="post" id="remove-form" class="hidden">
                     <input type="hidden" name="Id" />

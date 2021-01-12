@@ -1,0 +1,31 @@
+.error-spad1{
+    margin-top: 100px;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding: 70px;
+}
+.error-title h1{
+    font-family: monospace;
+    color: grey;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 100px;
+    letter-spacing: 5px;
+}
+.error-spad2{
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+}
+.error-content h1{
+    font-family: monospace;
+    color: grey;
+    font-weight: 550;
+}
+.error-content p{
+    font-family: monospace;
+    color: grey;
+    font-size: 25px;
+    margin-top: 30px;
+}

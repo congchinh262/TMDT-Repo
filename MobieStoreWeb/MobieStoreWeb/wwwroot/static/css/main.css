@@ -834,7 +834,7 @@ h2.title:before{
 
 
 h2.title {
-  color: #FE980F;
+  color: #000;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -863,7 +863,7 @@ h2.title {
 .productinfo h2{
 	color: #FE980F;
 	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
+	font-size: 26px;
 	font-weight: 700;
 }
 .product-overlay h2{
@@ -881,8 +881,9 @@ h2.title {
   color: #696763;
 }
 
-.productinfo img{
-  width: 100%;
+.productinfo img {
+	max-width: 100%;
+	height: 255px;
 }
 
 .productinfo{
@@ -951,7 +952,7 @@ h2.title {
 }
 
 .add-to-cart:hover {
-  background: #FE980F;
+  background: #000;
   border: 0 none;
   border-radius: 0;
   color: #FFFFFF;
@@ -966,7 +967,7 @@ h2.title {
 }
 
 .add-to-cart:hover {
-  background: #FE980F;
+  background: #000;
   color: #FFFFFF;
 }
 
@@ -1220,6 +1221,7 @@ h2.title {
   padding-left: 60px;
   padding-top: 60px;
   position: relative;
+  font-size: 16px;
 }
 
 .newarrival{
@@ -1231,8 +1233,9 @@ h2.title {
 .product-information h2 {
   color: #363432;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   margin-top: 0;
+  font-weight: 700;
 }
 
 .product-information p {
@@ -1248,7 +1251,7 @@ h2.title {
 }
 
 .product-information span span {
-  color: #FE980F;
+  color: #000;
   float: left;
   font-family: 'Roboto', sans-serif;
   font-size: 30px;

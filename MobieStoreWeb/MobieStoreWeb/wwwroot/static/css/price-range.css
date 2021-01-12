@@ -10,6 +10,7 @@
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  width: 100%;
 }
 .slider.slider-horizontal {
   width: 210px;
@@ -72,7 +73,15 @@
   margin-left: 0;
 }
 .slider input {
-  display: none;
+    display: inherit;
+    overflow: visible;
+    height: 46px;
+    width: 100%;
+    font-size: 15px;
+    color: #727171;
+    padding-left: 20px;
+    border: 1px solid #ebebeb;
+    background: #ffffff;
 }
 .slider .tooltip-inner {
   white-space: nowrap;

@@ -1,0 +1,161 @@
+.shop-details{
+    display: block;
+}
+.product-details-pic{
+    background: #f3f2ee;
+    padding: 40px 0 50px;
+}
+.col-lg-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.product-top-a{
+    font-size: 14px;
+    color: inherit;
+    font-family: monospace;
+    display: inline-block;
+    position: relative;
+    text-decoration: none !important;
+}
+a.product-top-a:hover{
+    color: black;
+}
+.product-details-breadcrumb span{
+    font-size: 14px;
+    font-family: monospace;
+    color: #b7b7b7;
+}
+.product-detail-info{
+    padding-top: 40px;
+}
+.product-pics{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.product-pics img{
+    max-width: 100%;
+}
+.product-info{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.product-info h5{
+    color:  #c9192e;
+    font-weight: 550;
+    font-family: monospace;
+    font-size: 25px;
+}
+.price-span{
+    font-size: 15px;
+    color: black;
+}
+.product-info h1{
+    font-weight: 550;
+    letter-spacing: .05em;
+}
+.product-rate{
+    display: flex;
+}
+.rating-star i{
+    color: #c9192e;
+}
+i.fa-star:hover{
+    color: yellow;
+}
+.product-rate p{
+    margin-left: 15px;
+    font-weight: 550;
+}
+.point-rate{
+    margin-left: 5px;
+}
+.product-size{
+    padding: 10px;
+    border-bottom: 1px solid #dedede  ;
+}
+.label-size{
+    font-size: 20px;
+    font-weight: 550;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+.size-options{
+    /* float: right; */
+    height: 45px;
+    width: 350px;
+    color: gray;
+    text-align: center;
+}
+.size-options option{
+    color: black;
+}
+.btn-submit{
+    height: 50px;
+    width: 160px;
+    border: 1px black solid;
+    border-radius: 25px;
+    background:  #c9192e;
+    font-weight: 550;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+input.btn-submit:hover{
+    background: black;
+}
+.size-chart{
+    padding: 10px;
+    color: #c9192e;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-weight: 550;
+}
+a.size-chart:hover{
+    color:black;
+}
+.product-des{
+    padding: 10px;
+}
+.product-des h3{
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: 550;
+}
+.product-des p{
+    font-family: monospace;
+    font-size: 12.5px;
+    margin-left: 10px;
+}
+a.hastag:hover{
+    text-decoration: none;
+}
+.feedback-form{
+    background: #f3f2ee;
+    padding-bottom: 50px;
+}
+.cus-feedback h5{
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+}
+.cus-feedback input{
+    padding: 15px;
+    width: 100%;
+    font-family: monospace;  
+    border: 1px solid #ccc;
+}
+.text-area{
+    font-family: monospace;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+textarea.text-area:focus{
+    outline: none;
+}

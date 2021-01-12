@@ -4,9 +4,9 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <li><a asp-area="" asp-controller="Account" asp-action="Index"><i class="fa fa-lock"></i> Hello @User.Identity.Name!</a></li>
-    <li>
-        <a href="javascript: void(0)" onclick="$(this).find('form').submit()">
+    <li style=" list-style: none; display: inline-block;  margin-right: 20px;"><a class="top-btn" asp-area="" asp-controller="Account" asp-action="Index"><i class="fa fa-lock"></i> Hello @User.Identity.Name!</a></li>
+    <li style=" list-style: none; display: inline-block;">
+        <a style="display: inline-block" class="top-btn" href="javascript: void(0)" onclick="$(this).find('form').submit()">
             <form class="form-inline" method="post" asp-area="" asp-controller="Account" asp-action="Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                 <i class="fa fa-lock"></i> Logout
             </form>
@@ -15,7 +15,7 @@
 }
 else
 {
-    <li><a asp-area="" asp-controller="Account" asp-action="Register"><i class="fa fa-lock"></i> Register</a></li>
+    <li style=" list-style: none; display: inline-block;  margin-right: 20px;"><a class="top-btn" asp-area="" asp-controller="Account" asp-action="Register"><i class="fa fa-lock"></i> Register</a></li>
 
-    <li><a asp-area="" asp-controller="Account" asp-action="Login"><i class="fa fa-lock"></i> Login</a></li>
+    <li style=" list-style: none; display: inline-block;"><a class="top-btn" asp-area="" asp-controller="Account" asp-action="Login"><i class="fa fa-lock"></i> Login</a></li>
 }

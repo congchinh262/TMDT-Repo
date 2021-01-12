@@ -38,19 +38,7 @@
                         </div>
                     </div>
 
-                    <div class="price-range">
-                        <!--price-range-->
-                        <h2>Price Range</h2>
-                        <div class="well">
-                            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2"><br />
-                            <b>$ 0</b> <b class="pull-right">$ 600</b>
-                        </div>
-                    </div>
-
-                    <div class="shipping text-center">
-                        <!--shipping-->
-                        <img src="images/home/shipping.jpg" alt="" />
-                    </div>
+                   
 
                 </div>
             </div>
@@ -58,7 +46,7 @@
             <div class="col-sm-9 padding-right">
                 <div class="features_items">
                     <!--features_items-->
-                    <h2 class="title text-center">Features Items</h2>
+                    <h2 class="title text-center">Product Items</h2>
                     <div class="row">
                         @foreach (var item in Model)
                         {
@@ -68,20 +56,14 @@
                                         <div class="productinfo text-center">
                                             <a asp-action="Details" asp-route-id="@item.Id">
                                                 <img src="~/images/products/@item.Image" alt="" />
-                                                <h2>@item.Price ĐLĐ</h2>
+                                                <h2>$@item.Price</h2>
                                                 <p>@item.Name</p>
                                             </a>
-                                            <form asp-controller="Cart" asp-action="AddToCart" method="post">
+                                            <form  asp-controller="Cart" asp-action="AddToCart" method="post">
                                                 <input type="hidden" name="Id" value="@item.Id" />
-                                                <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                <button style=" padding: 1.375rem 2.75rem; font-size: 14px" type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
                                             </form>
                                         </div>
-                                    </div>
-                                    <div class="choose">
-                                        <ul class="nav nav-pills nav-justified">
-                                            <li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                            <li><a href=""><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
